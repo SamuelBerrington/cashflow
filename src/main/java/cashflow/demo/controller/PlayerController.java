@@ -96,5 +96,8 @@ public class PlayerController {
     return CONSTANT_MAIN_VIEW;
   }
 
-
+  @GetMapping("")
+  public String home() {
+    return "index.html";
+  }
 }
