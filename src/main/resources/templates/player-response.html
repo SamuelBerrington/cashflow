@@ -1,0 +1,665 @@
+<div style="width: 595px; height: 842px; position: relative; background: white">
+  <div style="width: 260px; height: 292px; left: 30px; top: 60px; position: absolute; background: white; border: 1px black solid"></div>
+  <div style="left: 40px; top: 101px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-style: italic; font-weight: 400; line-height: 10px; word-wrap: break-word">Описание:</div>
+  <div style="left: 210px; top: 101px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-style: italic; font-weight: 400; line-height: 10px; word-wrap: break-word">Доход:</div>
+  <div style="left: 210px; top: 115px; position: absolute" th:text="${playerResponse.profession.salary}"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 130px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 260px; height: 30px; left: 30px; top: 60px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+  <div style="left: 40px; top: 141px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Недвижимость:</div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 170px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 170px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${!playerResponse.ownRealEstates.isEmpty()}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 155px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 155px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 190px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 190px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 1)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 175px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 175px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 210px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 210px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 2)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 195px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 195px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 230px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 230px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 3)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 215px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 215px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 250px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 250px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 4)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 235px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 235px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).income}"></div>
+  </div>
+
+
+  <div style="left: 40px; top: 261px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Бизнес:</div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 290px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 290px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${!playerResponse.ownBusinesses.isEmpty()}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 275px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 275px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 310px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 310px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownBusinesses.size() > 1)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 295px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 295px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).income}"></div>
+  </div>
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 330px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 330px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownBusinesses.size() > 2)}">
+    <div style="width: 150px; height: 0px; left: 40px; top: 315px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).name}"></div>
+    <div style="width: 70px; height: 0px; left: 210px; top: 315px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).income}"></div>
+  </div>
+
+
+
+  <div style="left: 40px; top: 121px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Заработок:</div>
+  <div style="left: 82px; top: 41px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Ведомость расходов и доходов:</div>
+  <div style="left: 137px; top: 69px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Доходы:</div>
+
+
+
+
+
+  <div style="width: 240.50px; height: 0px; left: 310px; top: 290px; position: absolute; border: 2px black solid"></div>
+  <div style="width: 240.50px; height: 0px; left: 310px; top: 529px; position: absolute; border: 2px black solid"></div>
+
+  <div style="width: 260px; height: 231px; left: 30px; top: 351px; position: absolute; background: white; border: 1px black solid"></div>
+  <div style="width: 260px; height: 30px; left: 30px; top: 351px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+  <div style="width: 211px; height: 82px; left: 310px; top: 330px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+
+  <div style="left: 135px; top: 360px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Расходы</div>
+  <div style="width: 74px; height: 23px; left: 30px; top: 7px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+  <div style="width: 67px; height: 9px; left: 34px; top: 14px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Профессия:</div>
+  <div style="width: 36px; height: 9px; left: 145px; top: 14px; position: absolute" th:text="${playerResponse.profession.name}"></div>
+  <div style="width: 156px; height: 0px; left: 104px; top: 29.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 156.50px; height: 0px; left: 394px; top: 29.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 74px; height: 23px; left: 320px; top: 7px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+  <div style="width: 36px; height: 9px; left: 339px; top: 14px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Игрок:</div>
+  <div style="width: 36px; height: 9px; left: 439px; top: 14px; position: absolute" th:text="${playerResponse.name}"></div>
+  <div style="width: 156.50px; height: 0px; left: 394px; top: 59.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 74px; height: 23px; left: 320px; top: 37px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+  <div style="width: 51px; height: 9px; left: 332px; top: 44px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Аудитор:</div>
+  <div style="width: 51px; height: 9px; left: 439px; top: 44px; position: absolute" th:text="${playerResponse.auditor}"></div>
+  <div style="width: 108px; height: 9px; left: 320px; top: 100px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Пассивный доход:</div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 109.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 94px; position: absolute" th:text="${playerResponse.passiveIncome}"></div>
+  <div style="width: 108px; height: 9px; left: 320px; top: 231px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Общий доход:</div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 240px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 225px; position: absolute" th:text="${playerResponse.totalIncome}"></div>
+
+  <div style="left: 463px; top: 564px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">(чек оплаты)</div>
+  <div style="width: 124px; height: 9px; left: 310px; top: 550px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Ежемесячный доход:</div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 560px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 545px; position: absolute" th:text="${playerResponse.monthlyIncome}"></div>
+
+  <div style="width: 108px; height: 9px; left: 310px; top: 450px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Общий расход:</div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 460px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 110px; height: 0px; left: 440px; top: 445px; position: absolute" th:text="${playerResponse.expense}"></div>
+  <div style="width: 126px; height: 9px; left: 320px; top: 350px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Количество детей:</div>
+  <div style="width: 60px; height: 0px; left: 450px; top: 360px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 60px; height: 0px; left: 450px; top: 345px; position: absolute" th:text="${playerResponse.children}"></div>
+  <div style="width: 126px; height: 9px; left: 320px; top: 380px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Расходы на ребенка:</div>
+  <div style="width: 60px; height: 0px; left: 450px; top: 390px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 60px; height: 0px; left: 450px; top: 375px; position: absolute" th:text="${playerResponse.profession.childExpenses}"></div>
+  <div style="width: 120px; height: 116px; left: 320px; top: 119px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 9.60px; word-wrap: break-word">(Денежный поток от капиталовложений<br/>+дивидендов<br/>+аренды недвижимости<br/>+бизнеса)</div>
+
+
+  <div style="left: 40px; top: 394px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Налоги:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 401px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 385px; position: absolute" th:text="${playerResponse.profession.tax}"></div>
+
+  <div style="left: 40px; top: 414px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Оплата закладной на дом:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 421px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 405px; position: absolute" th:text="${playerResponse.profession.mortgage}"></div>
+
+  <div style="left: 40px; top: 434px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Оплата кредита на образование:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 441px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 425px; position: absolute" th:text="${playerResponse.profession.educationLoan}"></div>
+
+  <div style="left: 40px; top: 454px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Оплата кредита на автомобиль:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 461px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 445px; position: absolute" th:text="${playerResponse.profession.carLoan}"></div>
+
+  <div style="left: 40px; top: 474px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Выплаты по кредитной карточке:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 481px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 465px; position: absolute" th:text="${playerResponse.profession.creditCardLoan}"></div>
+
+  <div style="left: 40px; top: 494px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Розничные расходы:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 501px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 485px; position: absolute" th:text="${playerResponse.profession.retailLoan}"></div>
+
+  <div style="left: 40px; top: 514px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Другие расходы:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 521px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 505px; position: absolute" th:text="${playerResponse.profession.otherExpenses}"></div>
+
+  <div style="left: 40px; top: 534px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Расходы на детей:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 541px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 525px; position: absolute" th:text="${playerResponse.childExpenses}"></div>
+
+  <div style="left: 40px; top: 554px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 5.60px; word-wrap: break-word">Оплата кредита банка:</div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 561px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 545px; position: absolute" th:text="${playerResponse.bankLoan}"></div>
+
+
+
+
+
+  <div style="width: 150px; height: 0px; left: 40px; top: 790px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 150px; height: 0px; left: 40px; top: 810px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 150px; height: 0px; left: 40px; top: 830px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 790px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 810px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 830px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 150px; height: 0px; left: 40px; top: 850px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 850px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 150px; height: 0px; left: 40px; top: 870px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 870px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 210px; top: 690px; position: absolute; border: 1px black solid"></div>
+
+  <div style="left: 40px; top: 761px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Недвижимость</div>
+  <div style="left: 40px; top: 881px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Бизнес</div>
+  <div style="left: 40px; top: 681px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Зароботок</div>
+  <div style="left: 137px; top: 629px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Активы</div>
+  <div style="left: 248px; top: 791px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Цена</div>
+
+  <div style="width: 270px; height: 370px; left: 309px; top: 620px; position: absolute; background: white; border: 1px black solid"></div>
+  <div style="width: 270px; height: 30px; left: 309px; top: 620px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+
+  <div style="width: 280px; height: 370px; left: 30px; top: 620px; position: absolute; background: white; border: 1px black solid"></div>
+  <div style="width: 280px; height: 30px; left: 30px; top: 620px; position: absolute; background: #FFC17A; border: 1px black solid"></div>
+
+  <div style="width: 123px; left: 320px; top: 661px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Ипотека</div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 669.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 654.50px; position: absolute"  th:text="${playerResponse.profession.mortgageLiability}"></div>
+
+  <div style="width: 124px; left: 320px; top: 681px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Кредит на образование</div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 689.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 674.50px; position: absolute" th:text="${playerResponse.profession.educationLoanCost}"></div>
+
+  <div style="width: 124px; left: 320px; top: 701px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Кредит на автомобиль</div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 709.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 694.50px; position: absolute" th:text="${playerResponse.profession.carLoanCost}"></div>
+
+  <div style="width: 153px; left: 320px; top: 721px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Долг по кредитным карточкам</div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 729.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 714.50px; position: absolute" th:text="${playerResponse.profession.creditCardDebt}"></div>
+
+  <div style="width: 173px; left: 320px; top: 741px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Розничный долг (мелкие кредиты)</div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 749.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 70px; height: 0px; left: 500px; top: 734.50px; position: absolute" th:text="${playerResponse.profession.retailDebt}"></div>
+
+  <div style="width: 124px; left: 320px; top: 761px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">По закладным</div>
+  <div style="width: 124px; left: 320px; top: 961px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Кредит банка</div>
+  <div style="width: 170px; height: 0px; left: 400px; top: 969.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 170px; height: 0px; left: 400px; top: 954.50px; position: absolute" th:text="${playerResponse.bankDebt}"></div>
+  <div style="width: 124px; left: 320px; top: 880px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Пассивы (бизнес)</div>
+
+
+
+
+  <div style="left: 40px; top: 681px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Бизнес</div>
+  <div style="left: 130px; top: 681px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Первый взнос</div>
+  <div style="left: 220px; top: 681px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Цена</div>
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 710px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 710px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 710px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 909.50px; position: absolute;  border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 909.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${!playerResponse.ownBusinesses.isEmpty()}">
+    <div style="width: 80px; height: 17px; left: 40px; top: 695px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 695px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 695px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 894.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 894.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(0).mortgage}"></div>
+  </div>
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 730px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 730px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 730px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 929.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 929.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownBusinesses.size() > 1)}">
+    <div style="width: 80px; height: 17px; left: 40px; top: 715px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 715px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 715px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 914.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 914.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(1).mortgage}"></div>
+  </div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 750px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 750px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 750px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 949.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 949.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownBusinesses.size() > 2)}">
+    <div style="width: 80px; height: 17px; left: 40px; top: 735px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 735px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 735px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 934.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 934.50px; position: absolute" th:text="${playerResponse.ownBusinesses.get(2).mortgage}"></div>
+  </div>
+
+  <div style="left: 40px; top: 761px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Недвижимость</div>
+  <div style="left: 220px; top: 761px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Цена</div>
+  <div style="left: 130px; top: 761px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Первый взнос</div>
+
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 790px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 790px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 790px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 789.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 789.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${!playerResponse.ownRealEstates.isEmpty()}">
+    <div style="width: 80px; height: 17px; left: 40px; top: 775px; position: absolute"  th:text="${playerResponse.ownRealEstates.get(0).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 775px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 775px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 772.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 772.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(0).mortgage}"></div>
+  </div>
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 810px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 810px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 810px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 809.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 809.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 1)}">
+    <div style="width: 80px; height: 17px; left: 40px; top: 795px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 795px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 795px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 792.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 792.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(1).mortgage}"></div>
+  </div>
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 830px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 830px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 830px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 829.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 829.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 2)}">
+    <div style="width: 80px; height: 0px; left: 40px; top: 815px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 815px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 815px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 812.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 812.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(2).mortgage}"></div>
+  </div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 850px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 850px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 850px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 849.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 849.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 3)}">
+    <div style="width: 80px; height: 0px; left: 40px; top: 835px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).name}"></div>
+    <div style="width: 80px; height:17px; left: 130px; top: 835px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 835px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 832.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 832.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(3).mortgage}"></div>
+  </div>
+
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 870px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 870px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 870px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 140px; height: 0px; left: 320px; top: 869.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 100px; height: 0px; left: 470px; top: 869.50px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownRealEstates.size() > 4)}">
+    <div style="width: 80px; height: 0px; left: 40px; top: 855px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 855px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 855px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).price}"></div>
+    <div style="width: 140px; height: 17px; left: 320px; top: 852.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).name}"></div>
+    <div style="width: 100px; height: 17px; left: 470px; top: 852.50px; position: absolute" th:text="${playerResponse.ownRealEstates.get(4).mortgage}"></div>
+  </div>
+
+  <div style="left: 40px; top: 881px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Акции</div>
+  <div style="left: 220px; top: 881px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Цена</div>
+  <div style="left: 130px; top: 881px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Колличество</div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 910px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 910px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 910px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${!playerResponse.ownStocks.isEmpty()}">
+    <div style="width: 80px; height: 0px; left: 40px; top: 895px; position: absolute" th:text="${playerResponse.ownStocks.get(0).name}"></div>
+    <div style="width: 80px; height: 0px; left: 130px; top: 895px; position: absolute" th:text="${playerResponse.ownStocks.get(0).firstPayment}"></div>
+    <div style="width: 80px; height: 0px; left: 220px; top: 895px; position: absolute" th:text="${playerResponse.ownStocks.get(0).price}"></div>
+  </div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 930px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 930px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 930px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownStocks.size() > 1)}">
+    <div style="width: 80px; height: 15px; left: 40px; top: 915px; position: absolute" th:text="${playerResponse.ownStocks.get(1).name}"></div>
+    <div style="width: 80px; height: 15px; left: 220px; top: 915px; position: absolute" th:text="${playerResponse.ownStocks.get(1).firstPayment}"></div>
+    <div style="width: 80px; height: 15px; left: 130px; top: 915px; position: absolute" th:text="${playerResponse.ownStocks.get(1).price}"></div>
+  </div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 950px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 950px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 950px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownStocks.size() > 2)}">
+    <div style="width: 80px; height: 15px; left: 40px; top: 935px; position: absolute" th:text="${playerResponse.ownStocks.get(2).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 935px; position: absolute" th:text="${playerResponse.ownStocks.get(2).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 935px; position: absolute" th:text="${playerResponse.ownStocks.get(2).price}"></div>
+  </div>
+
+  <div style="width: 80px; height: 0px; left: 40px; top: 970px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 970px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 220px; top: 970px; position: absolute; border: 1px black solid"></div>
+  <div th:if="${(playerResponse.ownStocks.size() > 3)}">
+    <div style="width: 80px; height: 15px; left: 40px; top: 955px; position: absolute" th:text="${playerResponse.ownStocks.get(3).name}"></div>
+    <div style="width: 80px; height: 17px; left: 130px; top: 955px; position: absolute" th:text="${playerResponse.ownStocks.get(3).firstPayment}"></div>
+    <div style="width: 80px; height: 17px; left: 220px; top: 955px; position: absolute" th:text="${playerResponse.ownStocks.get(3).price}"></div>
+  </div>
+
+  <div style="left: 40px; top: 661px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 10px; word-wrap: break-word">Сбережения</div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 669.50px; position: absolute; border: 1px black solid"></div>
+  <div style="width: 80px; height: 0px; left: 130px; top: 654.50px; position: absolute" th:text="${playerResponse.profession.savings}"></div>
+  <div style="left: 148px; top: 629px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Активы</div>
+  <div style="left: 255px; top: 597px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Балансовый отчет</div>
+  <div style="width: 52px; left: 418px; top: 629px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 12px; word-wrap: break-word">Пассивы</div>
+
+
+  <form style="width: 80px; height: 0px; left: 650px; top: 30px; position: absolute"
+        th:action="@{/player/addRealEstate/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Назначение поля "Тип актива" -->
+    <div style="width: 80px; height: 17px; left: -75px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Тип актива</div>
+    <div style="width: 80px; height: 0px; left: -75px; top: 10px; position: absolute; border: 1px black solid"></div>
+    <select name="assetType" id="asset-type-select20" style="width: 80px; height: 17px; left: -75px; top: -7px; position: absolute"
+            onchange="updateAssetFields(this.value)">
+      <option value=""></option>
+      <option value="business">бизнес</option>
+      <option value="realEstate">недвижимость</option>
+      <option value="stock">акции</option>
+    </select>
+
+    <!-- Назначение поля "Недвижимость" -->
+    <div id="realEstateField" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Недвижимость</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetName" id="assetName" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="realEstates : ${playerResponse.realEstates}"
+                th:value="${realEstates.name}"
+                th:text="${realEstates.name}">
+        </option>
+      </select>
+    </div>
+
+    <!-- Назначение поля "Бизнес" -->
+    <div id="businessField" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Бизнес</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetName" id="assetName2" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="business : ${playerResponse.business}"
+                th:value="${business.name}"
+                th:text="${business.name}">
+        </option>
+      </select>
+    </div>
+
+    <!-- Назначение поля "Акции" -->
+    <div id="stocksField" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Акции</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetName" id="assetName3" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="stocks : ${playerResponse.stocks}"
+                th:value="${stocks.name}"
+                th:text="${stocks.name}">
+        </option>
+      </select>
+    </div>
+
+
+
+    <!-- Назначение поля "Первоначальный взнос" -->
+    <div style="width: 80px; height: 17px; left: 95px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Взнос/Кол</div>
+    <div style="width: 80px; height: 0px; left: 95px; top: 10px; position: absolute; border: 1px black solid"></div>
+    <input type="text" name="downpayment" id="downpayment20" style="width: 80px; height: 17px; left: 95px; top: -7px; position: absolute">
+
+    <!-- Назначение поля "Цена" -->
+    <div style="width: 80px; height: 17px; left: 180px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Цена</div>
+    <div style="width: 80px; height: 0px; left: 180px; top: 10px; position: absolute; border: 1px black solid"></div>
+    <input type="text" name="price" id="price20" style="width: 80px; height: 17px; left: 180px; top: -7px; position: absolute">
+
+    <!-- Назначение поля "Доход" -->
+    <div style="width: 80px; height: 17px; left: 265px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Доход</div>
+    <div style="width: 80px; height: 0px; left: 265px; top: 10px; position: absolute; border: 1px black solid"></div>
+    <input type="text" name="income" id="income20" style="width: 80px; height: 17px; left: 265px; top: -7px; position: absolute">
+
+    <!-- Кнопка "Добавить актив" -->
+    <button type="submit" style="left: 350px; top: -7px; position: absolute;">Добавить актив</button>
+  </form>
+
+  <script>
+    function updateAssetFields(assetType) {
+      document.getElementById('realEstateField').style.display = (assetType === 'realEstate') ? 'block' : 'none';
+      document.getElementById('businessField').style.display = (assetType === 'business') ? 'block' : 'none';
+      document.getElementById('stocksField').style.display = (assetType === 'stock') ? 'block' : 'none';
+    }
+  </script>
+
+
+
+  <form style="width: 80px; height: 0px; left: 650px; top: 230px; position: absolute"
+        th:action="@{/player/removeAsset/{name}(name=${playerResponse.name})}"
+        method="POST"
+        id="removeAssetForm">
+
+    <!-- Назначение поля "Тип актива" -->
+    <div style="width: 80px; height: 17px; left: -75px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Тип актива</div>
+    <div style="width: 80px; height: 0px; left: -75px; top: 10px; position: absolute; border: 1px black solid"></div>
+    <select name="assetType" id="asset-type-select2" style="width: 80px; height: 17px; left: -75px; top: -7px; position: absolute"
+            onchange="updateAssetFields2(this.value)">
+      <option value=""></option>
+      <option value="business">бизнес</option>
+      <option value="realEstate">недвижимость</option>
+      <option value="stock">акции</option>
+    </select>
+
+    <!-- Назначение поля "Недвижимость" -->
+    <div id="realEstateField2" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Недвижимость</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetId" id="assetId" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="realEstates : ${playerResponse.ownRealEstates}"
+                th:value="${realEstates.id}"
+                th:text="${realEstates.name}">
+        </option>
+      </select>
+    </div>
+
+    <!-- Назначение поля "Бизнес" -->
+    <div id="businessField2" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Бизнес</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetId" id="assetId2" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="business : ${playerResponse.ownBusinesses}"
+                th:value="${business.id}"
+                th:text="${business.name}">
+        </option>
+      </select>
+    </div>
+
+    <!-- Назначение поля "Акции" -->
+    <div id="stocksField2" style="display: none;">
+      <div style="width: 80px; height: 17px; left: 10px; top: -20px; position: absolute; font-size: 12px; text-align: center;">Акции</div>
+      <div style="width: 80px; height: 0px; left: 10px; top: 10px; position: absolute; border: 1px black solid"></div>
+      <select name="assetId" id="assetId3" style="width: 80px; height: 17px; left: 10px; top: -7px; position: absolute">
+        <option value=""></option>
+        <option th:each="stocks : ${playerResponse.ownStocks}"
+                th:value="${stocks.id}"
+                th:text="${stocks.name}">
+        </option>
+      </select>
+    </div>
+
+    <!-- Кнопка "Удалить актив" -->
+    <button type="submit" style="left: 95px; top: -7px; position: absolute;">Удалить актив</button>
+  </form>
+  <script>
+    function updateAssetFields2(assetType) {
+      document.getElementById('realEstateField2').style.display = (assetType === 'realEstate')
+        ? 'block' : 'none';
+      document.getElementById('businessField2').style.display = (assetType === 'business') ? 'block'
+        : 'none';
+      document.getElementById('stocksField2').style.display = (assetType === 'stock') ? 'block'
+        : 'none';
+    }
+
+    document.getElementById('removeAssetForm').addEventListener('submit', function (event) {
+      // Удаляем все поля assetId, кроме активного
+      const assetType = document.querySelector('#asset-type-select2').value;
+      const assetIdFields = document.querySelectorAll('select[name="assetId"]');
+
+      // Определяем, какое поле должно быть активно
+      let activeFieldId = '';
+      switch (assetType) {
+        case 'realEstate':
+          activeFieldId = 'assetId'; // Поле для недвижимости
+          break;
+        case 'business':
+          activeFieldId = 'assetId2'; // Поле для бизнеса
+          break;
+        case 'stock':
+          activeFieldId = 'assetId3'; // Поле для акций
+          break;
+      }
+
+      // Отключаем все поля assetId, кроме активного
+      assetIdFields.forEach(field => {
+        if (field.id !== activeFieldId) {
+          field.disabled = true; // Отключаем ненужные поля
+        } else {
+          field.disabled = false; // Включаем активное поле
+        }
+      });
+    });
+  </script>
+
+
+  <form style="width: 80px; height: 0px; left: 220px; top: 550px; position: absolute"
+        th:action="@{/player/removeAll/{name}(name=${playerResponse.name})}"
+        method="POST">
+    <button type="submit" style="left: 350px; top: -7px; position: absolute;">Удалить все</button>
+  </form>
+
+  <form style="width: 80px; height: 0px; left: 220px; top: 338px; position: absolute"
+        th:action="@{/player/addChild/{name}(name=${playerResponse.name})}"
+        method="POST">
+    <button type="submit" style="left: 350px; top: -7px; position: absolute;">Ребенок родился</button>
+  </form>
+
+  <form style="width: 80px; height: 0px; left: 220px; top: 380px; position: absolute"
+        th:action="@{/player/deleteChild/{name}(name=${playerResponse.name})}"
+        method="POST">
+    <button type="submit" style="left: 350px; top: -7px; position: absolute;">Ребенок умер</button>
+  </form>
+
+
+
+  <form style="width: 78px; height: 0px; left: 235px; top: 659px; position: absolute"
+        th:action="@{/player/payOffDebt/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Скрытое поле для debtType -->
+    <input type="hidden" name="debtType" value="mortgage">
+
+    <button type="submit" style="font-size: 12px; height: 18px; left: 350px; top: -7px; position: absolute;  white-space: nowrap">погасить долг</button>
+  </form>
+
+  <form style="width: 78px; height: 0px; left: 235px; top: 680px; position: absolute"
+        th:action="@{/player/payOffDebt/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Скрытое поле для debtType -->
+    <input type="hidden" name="debtType" value="educationDebt">
+
+    <button type="submit" style="font-size: 12px; height: 18px; left: 350px; top: -7px; position: absolute;  white-space: nowrap">погасить долг</button>
+  </form>
+
+  <form style="width: 78px; height: 0px; left: 235px; top: 701px; position: absolute"
+        th:action="@{/player/payOffDebt/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Скрытое поле для debtType -->
+    <input type="hidden" name="debtType" value="carDebt">
+
+    <button type="submit" style="font-size: 12px; height: 18px; left: 350px; top: -7px; position: absolute;  white-space: nowrap">погасить долг</button>
+  </form>
+
+  <form style="width: 78px; height: 0px; left: 235px; top: 722px; position: absolute"
+        th:action="@{/player/payOffDebt/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Скрытое поле для debtType -->
+    <input type="hidden" name="debtType" value="creditCardDebt">
+
+    <button type="submit" style="font-size: 12px; height: 18px; left: 350px; top: -7px; position: absolute; white-space: nowrap">погасить долг</button>
+  </form>
+
+  <form style="width: 78px; height: 0px; left: 235px; top: 743px; position: absolute"
+        th:action="@{/player/payOffDebt/{name}(name=${playerResponse.name})}"
+        method="POST">
+
+    <!-- Скрытое поле для debtType -->
+    <input type="hidden" name="debtType" value="retailDebt">
+
+    <button type="submit" style="font-size: 12px; height: 18px; left: 350px; top: -7px; position: absolute; white-space: nowrap">погасить долг</button>
+  </form>
+
+  <div style="position: absolute; left: 585px; top: 912px; width: 400px; height: 100px; display: flex; justify-content: space-between; align-items: center;">
+    <!-- Форма для взятия кредита -->
+    <form style="width: 48%;"
+          th:action="@{/player/takeCredit/{name}(name=${playerResponse.name})}"
+          method="POST">
+
+      <!-- Поле для ввода суммы кредита -->
+      <label for="creditAmount">Сколько взять в кредит:</label>
+      <input type="number" id="creditAmount" name="credit" min="0" required style="margin-left: 0px; width: 100%;" step="1000">
+
+      <!-- Кнопка для взятия кредита -->
+      <button type="submit" style="font-size: 12px; height: 25px; margin-top: 10px; width: 100%;">Взять в кредит</button>
+    </form>
+
+    <!-- Форма для погашения кредита -->
+    <form style="width: 48%;"
+          th:action="@{/player/payCredit/{name}(name=${playerResponse.name})}"
+          method="POST">
+
+      <!-- Поле для ввода суммы кредита -->
+      <label for="creditAmount2">Сколько отдать за кредит:</label>
+      <input type="number" id="creditAmount2" name="credit" min="0" th:max="${playerResponse.bankDebt}" required style="margin-left: 0px; width: 100%;" step="1000">
+
+      <!-- Кнопка для погашения кредита -->
+      <button type="submit" style="font-size: 12px; height: 25px; margin-top: 10px; width: 100%;">Отдать за кредит</button>
+    </form>
+  </div>
+
+</div>

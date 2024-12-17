@@ -1,0 +1,3 @@
+databaseChangeLog:
+  -
+#      file: db/changelog/sql/inittable.sql

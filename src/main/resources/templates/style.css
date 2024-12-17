@@ -1,0 +1,182 @@
+.cashflow {
+  background-color: #efebe4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.cashflow .div {
+  background-color: #efebe4;
+  height: 572px;
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+}
+
+.cashflow .overlap-group {
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgb(255, 124, 155) 0%,
+      rgb(233, 91, 150) 100%
+  );
+  height: 61px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.cashflow .text-wrapper {
+  color: #ffffffe6;
+  font-family: "Titillium Web-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 115px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  top: 17px;
+  white-space: nowrap;
+}
+
+.cashflow .iconsax-linear {
+  height: 24px;
+  left: 285px;
+  position: absolute;
+  top: 19px;
+  width: 24px;
+}
+
+.cashflow .group {
+  height: 12px;
+  left: 17px;
+  position: absolute;
+  top: 24px;
+  width: 18px;
+}
+
+.cashflow .vector {
+  height: 23px;
+  left: -3651px;
+  position: absolute;
+  top: -1940px;
+  width: 24px;
+}
+
+.cashflow .text-wrapper-2 {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 136px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 90px;
+  white-space: nowrap;
+}
+
+.cashflow .text-wrapper-3 {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 113px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 437px;
+  white-space: nowrap;
+}
+
+.cashflow .text-wrapper-4 {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 104px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 117px;
+  white-space: nowrap;
+}
+
+.cashflow .rectangle {
+  background-color: #ea5b97;
+  height: 150px;
+  left: 98px;
+  position: absolute;
+  top: 160px;
+  width: 124px;
+}
+
+.cashflow .flexcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 70px;
+  left: 21px;
+  position: absolute;
+  top: 340px;
+  width: 95px;
+}
+
+.cashflow .text {
+  align-self: stretch;
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: relative;
+}
+
+.cashflow .span {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 14px;
+}
+
+.cashflow .flexcontainer-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 70px;
+  left: 164px;
+  position: absolute;
+  top: 338px;
+  width: 49px;
+}
+
+.cashflow .overlap {
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #ea5b97;
+  border-radius: 15px;
+  height: 55px;
+  left: 59px;
+  position: absolute;
+  top: 465px;
+  width: 202px;
+}
+
+.cashflow .text-wrapper-5 {
+  color: #000000;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 14px;
+  white-space: nowrap;
+}

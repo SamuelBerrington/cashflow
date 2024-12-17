@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создание игрока</title>
+</head>
+<body>
+<h1>Создание нового игрока</h1>
+<form action="http://localhost:8080/player/create" method="POST">
+  <!-- Поле для ввода имени -->
+  <label for="name">Имя:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <!-- Тип игры (захардкоженный) -->
+  <label for="gameType">Тип игры:</label>
+  <select id="gameType" name="gameType">
+    <option value="simplified">Упрощенная</option>
+    <option value="advanced">Усложненная</option>
+  </select><br><br>
+
+  <label>Профессия:</label>
+  <select name="profession" id="real-estate-select20" required>
+    <option value=""></option>
+    <option th:each="professions : ${professions}"
+            th:value="${professions.id}"
+            th:text="${professions.name}">
+    </option>
+  </select><br><br>
+
+  <!-- Выпадающий список для профессий (захардкоженный) -->
+<!--  <label for="profession">Профессия:</label>-->
+<!--  <select id="profession" name="profession" required>-->
+<!--    <option value="warrior">Воин</option>-->
+<!--    <option value="mage">Маг</option>-->
+<!--    <option value="archer">Лучник</option>-->
+<!--    <option value="thief">Вор</option>-->
+<!--  </select><br><br>-->
+
+  <!-- Кнопка для создания игрока -->
+  <button type="submit">Создать игрока</button>
+</form>
+</body>
+</html>
